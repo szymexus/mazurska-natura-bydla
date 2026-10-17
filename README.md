@@ -49,6 +49,6 @@ Po zakupie własnej domeny należy zaktualizować te zmienne (`SITE_BASE=/`, `SI
 
 ## Wersja robocza v2
 
-Gałąź `v2`: większa typografia (treść 18 px, nawigacja i przyciski 16 px), większy nagłówek i logo, pełna nawigacja mobilna w osobnym rzędzie. Pod sekcją o współpracy dodano szerokie zdjęcie z `materialy/foteczki/Bengier.JPEG` (oryginał poza repo). Kopia ma maksymalnie 2400 px szerokości, bez metadanych; build generuje responsywne WebP. Zdjęcie zachowuje pełny kadr także na telefonie.
+Gałąź `v2`: większa typografia (treść 18 px, nawigacja 19 px, przyciski 16 px), większy nagłówek i logo, pełna nawigacja mobilna w osobnym rzędzie. Zdjęcie grupowe zachowuje cały kadr. Ze stopką hasłową „Blisko stada. Blisko natury” połączono szerokie zdjęcie z `materialy/foteczki/Bengier.JPEG` (oryginał poza repo). Kopia ma maksymalnie 2400 px szerokości, bez metadanych; build generuje responsywne WebP. Zdjęcie zachowuje pełny kadr także na telefonie. Po pierwszej korekcie nagłówek strony powiększono o około 20%, a tekst otwarcia zmniejszono o około 10%. Propozycja nowej narracji o naturalnym życiu zwierząt i wspierającej roli technologii pozostaje do omówienia; treści projektu nie zostały jeszcze przepisane.
 
 Zmiany na tej gałęzi nie aktualizują publicznej strony; workflow publikuje tylko `master`.
