@@ -655,9 +655,10 @@ h2 em {
 /* One continuous photographic closing section. */
 .closing-landscape {
   padding-block: 0;
+  background: var(--cream);
 }
 .closing-landscape-photo {
-  width: 100%;
+  width: min(1040px, calc(100% - 80px));
   padding-top: 0;
 }
 .closing-landscape-photo img {
@@ -665,14 +666,24 @@ h2 em {
   height: auto;
 }
 .closing-body {
-  padding-block: 64px;
+  width: 100%;
+  margin-top: 40px;
+  padding: 56px max(56px, calc((100% - 1280px) / 2));
+  background: var(--green);
+}
+.closing-body a {
+  right: max(56px, calc((100% - 1280px) / 2));
 }
 @media (max-width: 760px) {
   .closing-landscape-photo {
-    width: 100%;
+    width: calc(100% - 40px);
     padding-top: 0;
   }
   .closing-body {
-    padding-block: 48px;
+    margin-top: 28px;
+    padding: 40px 20px;
+  }
+  .closing-body a {
+    right: 20px;
   }
 }
