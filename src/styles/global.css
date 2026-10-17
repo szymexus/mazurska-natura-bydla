@@ -654,8 +654,8 @@ h2 em {
 
 /* One continuous photographic closing section. */
 .closing-landscape {
-  padding-block: 0;
-  background: var(--cream);
+  padding-block: 48px 0;
+  background: var(--green);
 }
 .closing-landscape-photo {
   width: min(1040px, calc(100% - 80px));
