@@ -46,3 +46,9 @@ Docelowy adres podglądu po udanym wdrożeniu: `https://szymexus.github.io/mazur
 Lokalnie ścieżka bazowa to `/`. Workflow ustawia `SITE_BASE=/mazurska-natura-bydla/` i `SITE_URL=https://szymexus.github.io`. Logo, favicon i pasek finansowania uwzględniają ścieżkę bazową.
 
 Po zakupie własnej domeny należy zaktualizować te zmienne (`SITE_BASE=/`, `SITE_URL=https://<domena>`), skonfigurować DNS i domenę w ustawieniach Pages. Domena nie została jeszcze kupiona ani podpięta.
+
+## Wersja robocza v2
+
+Gałąź `v2`: większa typografia (treść 18 px, nawigacja i przyciski 16 px), większy nagłówek i logo, pełna nawigacja mobilna w osobnym rzędzie. Pod sekcją o współpracy dodano szerokie zdjęcie z `materialy/foteczki/Bengier.JPEG` (oryginał poza repo). Kopia ma maksymalnie 2400 px szerokości, bez metadanych; build generuje responsywne WebP. Zdjęcie zachowuje pełny kadr także na telefonie.
+
+Zmiany na tej gałęzi nie aktualizują publicznej strony; workflow publikuje tylko `master`.
