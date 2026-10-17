@@ -1,0 +1,69 @@
+---
+import { Image } from 'astro:assets';
+import pasture from '../assets/pastwisko.jpg';
+import people from '../assets/wspolpraca.jpg';
+import '../styles/global.css';
+const asset = (name: string) => `${import.meta.env.BASE_URL.replace(/\/$/, '')}/${name}`;
+const areas = [
+  { number: '01', name: 'Zdrowie i dobrostan', text: 'Obserwacja zdrowia i zachowania zwierząt. Poszukiwanie rozwiązań, które pomogą ograniczać stres i wspierać dobrostan stada.', symbol: '◌' },
+  { number: '02', name: 'Pastwiska i żywienie', text: 'Lepsze wykorzystanie potencjału pastwisk. Przygotowanie rekomendacji dotyczących żywienia i przyrostów masy w ekstensywnym chowie.', symbol: '≋' },
+  { number: '03', name: 'Cyfrowe zarządzanie', text: 'Czujniki IoT, dane i narzędzia analityczne jako wsparcie codziennych decyzji hodowcy. Technologia dopasowana do warunków gospodarstwa.', symbol: '⌁' },
+];
+---
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Mazurska Natura Bydła — grupa operacyjna EPI. Łączymy praktykę hodowlaną, wiedzę ekspercką i technologię w ekstensywnym chowie bydła." />
+    <meta name="theme-color" content="#233e30" />
+    <title>Mazurska Natura Bydła — bliżej natury</title>
+    <link rel="icon" href={asset('logo.png')} type="image/png" />
+  </head>
+  <body>
+    <a class="skip-link" href="#tresc">Przejdź do treści</a>
+    <header class="header wrap">
+      <a class="brand" href="#start" aria-label="Mazurska Natura Bydła — początek strony">
+        <img src={asset('logo.png')} width="58" height="58" alt="" />
+        <span>Mazurska<br />Natura Bydła</span>
+      </a>
+      <nav aria-label="Nawigacja główna">
+        <a href="#projekt">O projekcie</a>
+        <a href="#obszary">Nasze kierunki</a>
+        <a href="#o-nas">O nas <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+    <main id="tresc">
+      <section class="hero" id="start" aria-labelledby="hero-title">
+        <Image class="hero-photo" src={pasture} widths={[640, 960, 1440, 1920, 2400]} sizes="100vw" width={2400} format="webp" quality={85} loading="eager" fetchpriority="high" alt="Stado bydła na naturalnym pastwisku przy wodzie, w otoczeniu drzew" />
+        <div class="hero-shade"></div>
+        <div class="hero-content wrap">
+          <p class="eyebrow light"><span class="dot"></span> Grupa operacyjna EPI</p>
+          <h1 id="hero-title">Z natury.<br />Z doświadczenia.<br /><em>Z myślą o przyszłości.</em></h1>
+          <p class="hero-intro">Łączymy praktykę hodowlaną, wiedzę i technologię.<br class="desktop" /> Dla przyszłości ekstensywnego chowu bydła.</p>
+          <a class="button cream" href="#projekt">Poznaj nasz projekt <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-bottom wrap"><span>Mazurska Natura Bydła</span><a href="#projekt">Bliżej natury <span aria-hidden="true">↓</span></a></div>
+      </section>
+      <section class="intro wrap section" id="projekt" aria-labelledby="intro-title">
+        <div><p class="eyebrow">01 / Idea projektu</p><h2 id="intro-title">Przyszłość hodowli<br />zaczyna się<br /><em>na pastwisku.</em></h2></div>
+        <div class="intro-copy"><span class="small-sprout" aria-hidden="true">❧</span><p class="lead">Natura wyznacza rytm.<br />Doświadczenie nadaje kierunek.</p><p>„Mazurska Natura Bydła” to Grupa Operacyjna EPI, w której spotykają się doświadczenie gospodarstw, wiedza ekspercka i możliwości narzędzi cyfrowych.</p><p>Wspólnie przygotowujemy rozwiązania dostosowane do ekstensywnego chowu bydła opasowego. Punktem wyjścia są zwierzęta, pastwiska i codzienna praktyka hodowcy.</p><a class="text-link" href="#obszary">Zobacz, nad czym pracujemy <span aria-hidden="true">↗</span></a></div>
+      </section>
+      <section class="directions" id="obszary" aria-labelledby="areas-title">
+        <div class="wrap section"><div class="section-heading"><div><p class="eyebrow">02 / Nasze kierunki</p><h2 id="areas-title">Jedna natura.<br /><em>Trzy obszary działania.</em></h2></div><p>Od uważnej obserwacji stada<br />do świadomych decyzji.</p></div>
+          <div class="areas">{areas.map(area => <article class="area"><div class="area-top"><span>{area.number}</span><span class="area-symbol" aria-hidden="true">{area.symbol}</span></div><h3>{area.name}</h3><p>{area.text}</p></article>)}</div>
+          <p class="areas-note">Rozwijamy założenia projektu w ramach wsparcia przygotowawczego.</p>
+        </div>
+      </section>
+      <section class="about wrap section" id="o-nas" aria-labelledby="about-title">
+        <figure><Image src={people} widths={[480, 800, 1200]} sizes="(max-width: 760px) 100vw, 50vw" width={1200} format="webp" alt="Uczestnicy spotkania grupy przy wspólnym stole" loading="lazy" /><figcaption>Różne doświadczenia. Wspólny kierunek.</figcaption></figure>
+        <div class="about-copy"><p class="eyebrow">03 / Ludzie i współpraca</p><h2 id="about-title">Wspólna ziemia.<br /><em>Wspólna perspektywa.</em></h2><p class="lead">Dobre rozwiązania<br />wyrastają ze współpracy.</p><p>Łączymy perspektywę gospodarstw z wiedzą ekspertów. Rozmawiamy o potrzebach hodowli i możliwościach technologii, szukając rozwiązań, które mają sens w praktyce.</p><p>Tak budujemy fundament dla nowych metod zarządzania stadem — blisko zwierząt i warunków, w których żyją.</p></div>
+      </section>
+      <section class="closing"><div class="wrap"><p class="eyebrow light">Mazurska Natura Bydła</p><p class="closing-title">Blisko stada.<br /><em>Blisko natury.</em></p><a href="#start" aria-label="Wróć na początek strony">↑</a></div></section>
+    </main>
+    <footer>
+      <div class="funding wrap"><img src={asset('finansowanie.png')} width="1385" height="221" loading="lazy" alt="Plan Strategiczny dla Wspólnej Polityki Rolnej na lata 2023–2027. Agencja Restrukturyzacji i Modernizacji Rolnictwa. Dofinansowane przez Unię Europejską." /><p>Przygotowano w ramach umowy nr 00325.DOPI.65730.228.2026 o przyznaniu pomocy w ramach interwencji I.13.5 Współpraca Grup Operacyjnych EPI – Zakres Wsparcie Przygotowawcze.</p></div>
+      <div class="footer-bottom wrap"><span>Grupa Operacyjna EPI „Mazurska Natura Bydła”</span><span>Natura · Wiedza · Współpraca</span></div>
+    </footer>
+  </body>
+</html>

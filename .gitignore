@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.astro/
+.env
+.env.*
+!.env.example
+
+# Lokalne ustawienia, logi i klucze
+.DS_Store
+*.log
+*.pem
+*.key
+.vscode/
+.idea/

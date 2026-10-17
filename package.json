@@ -1,0 +1,20 @@
+{
+  "name": "mazurska-natura-bydla",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "engines": {
+    "node": ">=24.22.0 <25"
+  },
+  "dependencies": {
+    "@astrojs/check": "0.9.10",
+    "astro": "7.4.0",
+    "typescript": "6.0.3"
+  }
+}
