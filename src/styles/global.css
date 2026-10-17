@@ -652,38 +652,63 @@ h2 em {
   }
 }
 
-/* One continuous photographic closing section. */
+/* Photograph and closing words share one green section. */
 .closing-landscape {
-  padding-block: 48px 0;
+  padding-block: 64px;
   background: var(--green);
 }
+.closing-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
 .closing-landscape-photo {
-  width: min(1040px, calc(100% - 80px));
-  padding-top: 0;
+  min-width: 0;
 }
 .closing-landscape-photo img {
   width: 100%;
   height: auto;
 }
-.closing-body {
-  width: 100%;
-  margin-top: 40px;
-  padding: 56px max(56px, calc((100% - 1280px) / 2));
-  background: var(--green);
+.closing .closing-body {
+  position: relative;
+  padding-bottom: 84px;
+  min-width: 0;
+}
+.closing-body .closing-title {
+  font-size: clamp(40px, 4.5vw, 64px);
 }
 .closing-body a {
-  right: max(56px, calc((100% - 1280px) / 2));
+  top: auto;
+  bottom: 0;
+  left: 0;
+  right: auto;
+  width: 48px;
+  height: 48px;
+}
+@media (max-width: 1000px) {
+  .closing-layout {
+    gap: 32px;
+  }
 }
 @media (max-width: 760px) {
-  .closing-landscape-photo {
-    width: calc(100% - 40px);
-    padding-top: 0;
+  .closing-landscape {
+    padding-block: 40px;
   }
-  .closing-body {
-    margin-top: 28px;
-    padding: 40px 20px;
+  .closing-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .closing .closing-body {
+    padding-bottom: 0;
+    padding-right: 60px;
+  }
+  .closing-body .closing-title {
+    font-size: clamp(36px, 9vw, 48px);
   }
   .closing-body a {
-    right: 20px;
+    left: auto;
+    right: 0;
+    bottom: 8px;
   }
 }
