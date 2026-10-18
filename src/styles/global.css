@@ -474,7 +474,9 @@ h2 em {
     width: 43px;
   }
   .header nav {
+    flex-wrap: wrap;
     gap: 16px;
+    row-gap: 0;
     font-size: 19px;
     width: 100%;
     justify-content: space-between;
