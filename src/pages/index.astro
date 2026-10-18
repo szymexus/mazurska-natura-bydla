@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import Contact from '../components/Contact.astro';
 import pasture from '../assets/pastwisko.jpg';
 import people from '../assets/wspolpraca.jpg';
 import cattle from '../assets/bydlo-nad-woda.jpg';
@@ -71,6 +72,7 @@ const areas = [
       </section>
     </main>
     <footer>
+      <Contact />
       <div class="funding wrap"><img src={asset('finansowanie.png')} width="1385" height="221" loading="lazy" alt="Plan Strategiczny dla Wspólnej Polityki Rolnej na lata 2023–2027. Agencja Restrukturyzacji i Modernizacji Rolnictwa. Dofinansowane przez Unię Europejską." /><p>Przygotowano w ramach umowy nr 00325.DOPI.65730.228.2026 o przyznaniu pomocy w ramach interwencji I.13.5 Współpraca Grup Operacyjnych EPI – Zakres Wsparcie Przygotowawcze.</p></div>
       <div class="footer-bottom wrap"><span>Grupa Operacyjna EPI „Mazurska Natura Bydła”</span><span>Natura · Wiedza · Współpraca</span></div>
     </footer>

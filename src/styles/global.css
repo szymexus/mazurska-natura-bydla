@@ -358,6 +358,27 @@ h2 em {
 .closing a:hover {
   background: #ffffff20;
 }
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-block: 48px;
+  border-bottom: 1px solid var(--line);
+}
+.contact h2 {
+  font-size: clamp(30px, 4vw, 44px);
+}
+.contact-email {
+  min-width: 0;
+  max-width: 100%;
+  padding-block: 12px;
+  font-size: clamp(16px, 2.5vw, 22px);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  overflow-wrap: anywhere;
+}
 .funding {
   padding-block: 44px;
 }
