@@ -14,8 +14,8 @@ concurrency:
 
 env:
   ASTRO_TELEMETRY_DISABLED: '1'
-  SITE_URL: https://szymexus.github.io
-  SITE_BASE: /mazurska-natura-bydla/
+  SITE_URL: https://mazurskanaturabydla.pl
+  SITE_BASE: /
 
 jobs:
   build:

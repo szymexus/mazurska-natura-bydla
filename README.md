@@ -41,11 +41,11 @@ Teksty redakcyjne są propozycją do akceptacji. Dane umowy i opis wsparcia prze
 Repozytorium docelowe: `szymexus/mazurska-natura-bydla`, główna gałąź: `master`.
 Przygotowany workflow `.github/workflows/deploy.yml` sprawdza typy, buduje i wdraża stronę po pushu do `master`. W ustawieniach repo należy włączyć Pages ze źródłem **GitHub Actions**.
 
-Docelowy adres podglądu po udanym wdrożeniu: `https://szymexus.github.io/mazurska-natura-bydla/`. Samo przygotowanie konfiguracji nie oznacza publikacji.
+Docelowy adres strony: `https://mazurskanaturabydla.pl/`. Działanie wymaga poprawnego DNS i zakończonej konfiguracji HTTPS w GitHub Pages.
 
-Lokalnie ścieżka bazowa to `/`. Workflow ustawia `SITE_BASE=/mazurska-natura-bydla/` i `SITE_URL=https://szymexus.github.io`. Logo, favicon i pasek finansowania uwzględniają ścieżkę bazową.
+Lokalnie i w workflow ścieżka bazowa to `/`. Workflow ustawia `SITE_BASE=/` i `SITE_URL=https://mazurskanaturabydla.pl`. Logo, favicon i pasek finansowania uwzględniają ścieżkę bazową.
 
-Po zakupie własnej domeny należy zaktualizować te zmienne (`SITE_BASE=/`, `SITE_URL=https://<domena>`), skonfigurować DNS i domenę w ustawieniach Pages. Domena nie została jeszcze kupiona ani podpięta.
+18 października 2026 użytkownik potwierdził rejestrację domeny w OVHcloud. Konfigurację kodu dostosowano do własnej domeny; ustawienia Pages, DNS i certyfikat należy sprawdzić przed uznaniem podpięcia za zakończone. DNS pozostaje w OVHcloud; rekordów pocztowych nie zastępujemy rekordami strony.
 
 ## Wersja robocza v2
 
