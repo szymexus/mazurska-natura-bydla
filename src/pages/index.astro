@@ -36,6 +36,7 @@ const areas = [
         <a href="#obszary">Nasze kierunki</a>
         <a href="#o-nas">O nas</a>
         <a href="#aktualnosci">Aktualności</a>
+        <a href="#dokumenty">Dokumenty</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
     </header>
@@ -72,6 +73,15 @@ const areas = [
             <a class="text-link" href={newsUrl()}>Wszystkie aktualności <span aria-hidden="true">↗</span></a>
           </div>
           <NewsCards limit={3} />
+        </div>
+      </section>
+      <section class="documents wrap section" id="dokumenty" aria-labelledby="documents-title">
+        <div><p class="eyebrow">05 / Dokumenty</p><h2 id="documents-title">Poznaj <em>plan operacji.</em></h2></div>
+        <div class="documents-copy">
+          <h3>Plan operacji Grupy Operacyjnej EPI „Mazurska Natura Bydła”</h3>
+          <p>Dokument przedstawia cele, zakres planowanych badań oraz założenia systemu zarządzania stadem bydła mięsnego w ekstensywnym systemie wypasu, z wykorzystaniem cyfrowego monitoringu zwierząt i pastwisk.</p>
+          <p class="document-meta">Opublikowano: 19 października 2026 · PDF · 9 stron · 306 KB</p>
+          <a class="text-link" href={asset('dokumenty/PLAN.MazurskaNaturaBydla.pdf')}>Otwórz plan operacji (PDF) <span aria-hidden="true">↗</span></a>
         </div>
       </section>
       <section class="closing closing-landscape" aria-label="Blisko stada, blisko natury">
