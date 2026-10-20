@@ -1,12 +1,32 @@
 ---
+import { Image } from 'astro:assets';
 import NewsLayout from '../../layouts/NewsLayout.astro';
-import NewsCards from '../../components/NewsCards.astro';
+import { news } from '../../data/news';
 ---
 <NewsLayout title="Aktualności" description="Spotkania, wizyty i wymiana doświadczeń grupy operacyjnej EPI Mazurska Natura Bydła.">
   <section class="wrap section news-archive">
     <p class="eyebrow">Aktualności</p>
     <h1>Z życia <em>projektu.</em></h1>
     <p class="news-intro">Spotykamy się, poznajemy rozwiązania i wymieniamy doświadczenia. Zobacz, jak rozwija się nasza współpraca.</p>
-    <NewsCards eager />
+    <ol class="news-timeline" aria-label="Spotkania od najnowszego">
+      {news.map((post, index) => <li id={post.slug} class="timeline-entry">
+        <div class="timeline-date"><time datetime={post.date}>{post.label}</time></div>
+        <article aria-labelledby={`title-${post.slug}`}>
+          <header>
+            <p class="eyebrow">{post.category}</p>
+            <h2 id={`title-${post.slug}`}>{post.title}</h2>
+          </header>
+          <div class="timeline-copy">{post.paragraphs.map(text => <p>{text}</p>)}</div>
+          <div class="timeline-photos">
+            {post.photos.map((photo, photoIndex) => <figure>
+              <a href={photo.src.src} target="_blank" rel="noopener" aria-label={`Powiększ zdjęcie: ${photo.alt} (nowa karta)`}>
+                <Image src={photo.src} widths={[480, 800, 1200, 1600]} sizes="(max-width: 760px) calc(100vw - 68px), (max-width: 1100px) 65vw, 900px" width={1600} format="webp" loading={index === 0 && photoIndex === 0 ? 'eager' : 'lazy'} decoding="sync" alt={photo.alt} />
+              </a>
+              <figcaption>{photo.caption}</figcaption>
+            </figure>)}
+          </div>
+        </article>
+      </li>)}
+    </ol>
   </section>
 </NewsLayout>

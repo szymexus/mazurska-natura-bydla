@@ -49,4 +49,4 @@ export const news = [
     photos: [{src: inn, alt: 'Uczestnicy spotkania rozmawiają przy stole we wnętrzu karczmy', caption: 'Spotkanie inicjujące współpracę w Borkach Wielkich.'}]
   }
 ];
-export const newsUrl = (slug = '') => `${import.meta.env.BASE_URL.replace(/\/$/, '')}/aktualnosci/${slug ? `${slug}/` : ''}`;
+export const newsUrl = (slug = '') => `${import.meta.env.BASE_URL.replace(/\/$/, '')}/aktualnosci/${slug ? `#${slug}` : ''}`;

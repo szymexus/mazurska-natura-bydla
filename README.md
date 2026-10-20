@@ -61,7 +61,7 @@ Zdjęcie końcowe jest po prawej stronie hasła „Blisko stada. Blisko natury�
 
 - `src/data/news.ts`: cztery relacje, daty, opisy, podpisy i przypisanie zdjęć. Kolejność od najnowszej. Zmiana przypisania wymaga edycji pola `photos` i ponownego builda.
 - `src/components/NewsCards.astro`: wspólna lista kart, na stronie głównej ograniczona do trzech wpisów.
-- `/aktualnosci/`: archiwum; `/aktualnosci/[slug]/`: pełne relacje generowane statycznie.
+- `/aktualnosci/`: ciągły feed pełnych relacji na pionowej osi czasu, od najnowszej. Karty na stronie głównej prowadzą do kotwic poszczególnych spotkań. Bez osobnych podstron relacji. Zdjęcia w pełnym kadrze, z możliwością otwarcia większego obrazu w nowej karcie.
 - `src/layouts/NewsLayout.astro`: nagłówek i stopka podstron aktualności.
 - `src/assets/spotkania/`: kopie pięciu zdjęć WhatsApp z materiałów spotkania. Oryginały pozostają poza repo. W plikach wejściowych sprawdzono brak EXIF/XMP w APP1; Astro generuje responsywne WebP.
 
