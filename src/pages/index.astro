@@ -1,6 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 import Contact from '../components/Contact.astro';
+import NewsCards from '../components/NewsCards.astro';
+import { newsUrl } from '../data/news';
 import pasture from '../assets/pastwisko.jpg';
 import people from '../assets/wspolpraca.jpg';
 import cattle from '../assets/bydlo-nad-woda.jpg';
@@ -33,6 +35,7 @@ const areas = [
         <a href="#projekt">O projekcie</a>
         <a href="#obszary">Nasze kierunki</a>
         <a href="#o-nas">O nas <span aria-hidden="true">↗</span></a>
+        <a href="#aktualnosci">Aktualności</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
     </header>
@@ -61,6 +64,15 @@ const areas = [
       <section class="about wrap section" id="o-nas" aria-labelledby="about-title">
         <figure><Image src={people} widths={[480, 800, 1200]} sizes="(max-width: 760px) 100vw, 50vw" width={1200} format="webp" alt="Uczestnicy spotkania grupy przy wspólnym stole" loading="lazy" /><figcaption>Różne doświadczenia. Wspólny kierunek.</figcaption></figure>
         <div class="about-copy"><p class="eyebrow">03 / Ludzie i współpraca</p><h2 id="about-title">Wspólna ziemia.<br /><em>Wspólna perspektywa.</em></h2><p class="lead">Dobre rozwiązania<br />wyrastają ze współpracy.</p><p>Łączymy perspektywę gospodarstw z wiedzą ekspertów. Rozmawiamy o potrzebach hodowli i możliwościach technologii, szukając rozwiązań, które mają sens w praktyce.</p><p>Tak budujemy fundament dla nowych metod zarządzania stadem, blisko zwierząt i warunków, w których żyją.</p></div>
+      </section>
+      <section class="news-section" id="aktualnosci" aria-labelledby="news-title">
+        <div class="wrap section">
+          <div class="section-heading">
+            <div><p class="eyebrow">04 / Aktualności</p><h2 id="news-title">Z życia <em>projektu.</em></h2></div>
+            <a class="text-link" href={newsUrl()}>Wszystkie aktualności <span aria-hidden="true">↗</span></a>
+          </div>
+          <NewsCards limit={3} />
+        </div>
       </section>
       <section class="closing closing-landscape" aria-label="Blisko stada, blisko natury">
         <div class="closing-layout wrap">

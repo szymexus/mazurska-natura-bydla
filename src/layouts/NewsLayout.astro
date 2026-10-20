@@ -1,0 +1,42 @@
+---
+import Contact from '../components/Contact.astro';
+import { newsUrl } from '../data/news';
+import '../styles/global.css';
+interface Props { title: string; description: string }
+const { title, description } = Astro.props;
+const home = import.meta.env.BASE_URL;
+const asset = (name: string) => `${home.replace(/\/$/, '')}/${name}`;
+---
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content={description} />
+<meta name="theme-color" content="#233e30" />
+<title>{title} | Mazurska Natura Bydła</title>
+<link rel="icon" href={asset('logo.png')} type="image/png" />
+</head>
+<body>
+<a class="skip-link" href="#tresc">Przejdź do treści</a>
+    <header class="header wrap">
+      <a class="brand" href={`${home}#start`} aria-label="Mazurska Natura Bydła: początek strony">
+        <img src={asset('logo.png')} width="58" height="58" alt="" />
+        <span>Mazurska<br />Natura Bydła</span>
+      </a>
+      <nav aria-label="Nawigacja główna">
+        <a href={`${home}#projekt`}>O projekcie</a>
+        <a href={`${home}#obszary`}>Nasze kierunki</a>
+        <a href={`${home}#o-nas`}>O nas <span aria-hidden="true">↗</span></a>
+        <a href={newsUrl()} aria-current="page">Aktualności</a>
+        <a href={`${home}#kontakt`}>Kontakt</a>
+      </nav>
+    </header>
+<main id="tresc"><slot /></main>
+    <footer>
+      <Contact />
+      <div class="funding wrap"><img src={asset('finansowanie.png')} width="1385" height="221" loading="lazy" alt="Plan Strategiczny dla Wspólnej Polityki Rolnej na lata 2023-2027. Agencja Restrukturyzacji i Modernizacji Rolnictwa. Dofinansowane przez Unię Europejską." /><p>Przygotowano w ramach umowy nr 00325.DOPI.65730.228.2026 o przyznaniu pomocy w ramach interwencji I.13.5 Współpraca Grup Operacyjnych EPI, Zakres Wsparcie Przygotowawcze.</p></div>
+      <div class="footer-bottom wrap"><span>Grupa Operacyjna EPI „Mazurska Natura Bydła”</span><span>Natura · Wiedza · Współpraca</span></div>
+    </footer>
+</body>
+</html>

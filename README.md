@@ -56,3 +56,13 @@ Zdjęcie końcowe jest po prawej stronie hasła „Blisko stada. Blisko natury�
 ## Alternatywna narracja
 
 `src/pages/natura/index.astro` — osobna propozycja pod `/natura/`, skupiona na naturalnym rytmie stada i technologii wspierającej hodowcę. Oznaczona jako wersja do porównania, z linkiem do obecnej strony oraz `noindex, nofollow`. Zachowuje opisywany przygotowawczy etap projektu i oznaczenia finansowania. Strona główna pozostaje niezależna. Treści wariantu są kopią do osobnego review; ewentualne wspólne zmiany układu trzeba uwzględnić w obu stronach.
+
+## Aktualności (20 października 2026)
+
+- `src/data/news.ts`: cztery relacje, daty, opisy, podpisy i przypisanie zdjęć. Kolejność od najnowszej. Zmiana przypisania wymaga edycji pola `photos` i ponownego builda.
+- `src/components/NewsCards.astro`: wspólna lista kart, na stronie głównej ograniczona do trzech wpisów.
+- `/aktualnosci/`: archiwum; `/aktualnosci/[slug]/`: pełne relacje generowane statycznie.
+- `src/layouts/NewsLayout.astro`: nagłówek i stopka podstron aktualności.
+- `src/assets/spotkania/`: kopie pięciu zdjęć WhatsApp z materiałów spotkania. Oryginały pozostają poza repo. W plikach wejściowych sprawdzono brak EXIF/XMP w APP1; Astro generuje responsywne WebP.
+
+Przypisanie zdjęć jest robocze, zgodnie z decyzją użytkownika ma zostać sprawdzone po publikacji. Nazwa uczelni w relacji z 19 października jest celowo ogólna: materiał tekstowy i oznaczenie na zdjęciu różnią się. Treści opracowano na podstawie `materialy/spotkanie/spotkania.md`, bez dopisywania niepotwierdzonych wyników spotkań. Do wpisów nie dodajemy długich myślników.
