@@ -1,0 +1,26 @@
+---
+interface Props { title: string; description: string; path: string; home?: boolean }
+const { title, description, path, home = false } = Astro.props;
+const site = Astro.site!;
+const canonical = new URL(path, site).href;
+const logo = new URL('logo.png', site).href;
+const data = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'Organization', '@id': new URL('#organization', site).href, name: 'Mazurska Natura Bydła', url: site.href, logo, email: 'kontakt@mazurskanaturabydla.pl' },
+    ...(home ? [{ '@type': 'WebSite', '@id': new URL('#website', site).href, name: 'Mazurska Natura Bydła', url: site.href, inLanguage: 'pl', publisher: { '@id': new URL('#organization', site).href } }] : [])
+  ]
+};
+---
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="pl_PL" />
+<meta property="og:site_name" content="Mazurska Natura Bydła" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={logo} />
+<meta property="og:image:alt" content="Logo grupy Mazurska Natura Bydła" />
+<script type="application/ld+json" set:html={JSON.stringify(data).replace(/</g, '\\u003c')} />

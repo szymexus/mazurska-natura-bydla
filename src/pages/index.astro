@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import Seo from '../components/Seo.astro';
 import Contact from '../components/Contact.astro';
 import NewsCards from '../components/NewsCards.astro';
 import { newsUrl } from '../data/news';
@@ -19,9 +20,8 @@ const areas = [
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Mazurska Natura Bydła. Grupa operacyjna EPI. Łączymy praktykę hodowlaną, wiedzę ekspercką i technologię w ekstensywnym chowie bydła." />
+    <Seo title="Mazurska Natura Bydła | Grupa Operacyjna EPI" description="Oficjalna strona grupy operacyjnej EPI Mazurska Natura Bydła. Ekstensywny chów bydła mięsnego, cyfrowy monitoring stada i pastwisk oraz aktualności projektu." path="/" home />
     <meta name="theme-color" content="#233e30" />
-    <title>Mazurska Natura Bydła | Bliżej natury</title>
     <link rel="icon" href={asset('logo.png')} type="image/png" />
   </head>
   <body>

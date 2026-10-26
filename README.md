@@ -68,3 +68,7 @@ Zdjęcie końcowe jest po prawej stronie hasła „Blisko stada. Blisko natury�
 Przypisanie zdjęć jest robocze, zgodnie z decyzją użytkownika ma zostać sprawdzone po publikacji. Nazwa uczelni w relacji z 19 października jest celowo ogólna: materiał tekstowy i oznaczenie na zdjęciu różnią się. Treści opracowano na podstawie `materialy/spotkanie/spotkania.md`, bez dopisywania niepotwierdzonych wyników spotkań. Do wpisów nie dodajemy długich myślników.
 
 Relacja z konferencji „Młodzi w Rolnictwie” (22–23 października 2026) opiera się na informacji użytkownika o udziale grupy i przedstawieniu pomysłu młodym rolnikom. Nazwę, datę i miejsce odczytano z ekranu na dostarczonym zdjęciu. Podany przez użytkownika link do zapowiedzi „Młodzi na Roli” ma inną nazwę i nie został użyty jako źródło szczegółów tej konferencji. Dwa zdjęcia w `src/assets/konferencja/` pochodzą z plików WhatsApp z 26 października, godz. 17.06.47 i 17.05.25; kopie zapisano bez metadanych, z zachowaniem pełnych kadrów.
+
+## Wyszukiwalność
+
+Konfiguracja metadanych, mapa strony, procedura Search Console i ograniczenia widoczności repozytorium: [SEO.md](SEO.md). Zmiany kodu nie zastępują weryfikacji konta właściciela w wyszukiwarce.
