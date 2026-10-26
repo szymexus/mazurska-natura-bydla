@@ -3,9 +3,25 @@ import farm from '../assets/spotkania/gospodarstwo.jpg';
 import presentation from '../assets/spotkania/prezentacja.jpg';
 import inn from '../assets/spotkania/karczma.jpg';
 import cattle from '../assets/spotkania/stado.jpg';
+import conferenceMembers from '../assets/konferencja/przedstawiciele.jpg';
+import conferencePresentation from '../assets/konferencja/prezentacja.jpg';
 
 // Robocze przypisanie zdjęć na podstawie materiałów. Do potwierdzenia przez właściciela.
 export const news = [
+  {
+    slug: 'mlodzi-w-rolnictwie', date: '2026-10-22', label: '22–23 października 2026', category: 'Wiedza i współpraca',
+    title: 'Mazurska Natura Bydła na konferencji „Młodzi w Rolnictwie”',
+    excerpt: 'Podczas konferencji w Lidzbarku Warmińskim członkowie grupy EPI przedstawili młodym rolnikom pomysł na połączenie tradycji wypasu z cyfrowym monitoringiem stada i pastwisk.',
+    paragraphs: [
+      'W dniach 22–23 października 2026 r. członkowie grupy operacyjnej EPI „Mazurska Natura Bydła” uczestniczyli w konferencji „Młodzi w Rolnictwie. Nowe pokolenie, nowe możliwości”, która odbyła się w Hotelu Krasicki w Lidzbarku Warmińskim.',
+      'Podczas wydarzenia dzielili się z młodymi rolnikami pomysłem na rozwój ekstensywnego chowu bydła mięsnego. Przedstawili założenia projektu łączącego tradycję wypasu z cyfrowym monitoringiem zwierząt i pastwisk, wspierającym codzienną pracę hodowcy.',
+      'Udział w konferencji był okazją do wymiany doświadczeń i rozmów o tym, jak nowe technologie mogą wspierać gospodarstwa korzystające z naturalnych zasobów łąk i pastwisk.'
+    ],
+    photos: [
+      {src: conferenceMembers, alt: 'Dwaj przedstawiciele grupy przy banerze Mazurska Natura Bydła na tle ekranu z nazwą konferencji Młodzi w Rolnictwie', caption: 'Przedstawiciele grupy EPI „Mazurska Natura Bydła” podczas konferencji „Młodzi w Rolnictwie”.'},
+      {src: conferencePresentation, alt: 'Prelegent z mikrofonem obok ekranu z prezentacją projektu Mazurska Natura Bydła', caption: 'Prezentacja założeń projektu łączącego tradycję wypasu z nowoczesnymi technologiami.'}
+    ]
+  },
   {
     slug: 'dobor-ras-do-chowu-ekstensywnego', date: '2026-10-19', label: '19 października 2026', category: 'Wiedza i współpraca',
     title: 'Dobór ras do chowu ekstensywnego',

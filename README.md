@@ -59,10 +59,12 @@ Zdjęcie końcowe jest po prawej stronie hasła „Blisko stada. Blisko natury�
 
 ## Aktualności (20 października 2026)
 
-- `src/data/news.ts`: cztery relacje, daty, opisy, podpisy i przypisanie zdjęć. Kolejność od najnowszej. Zmiana przypisania wymaga edycji pola `photos` i ponownego builda.
+- `src/data/news.ts`: relacje, daty, opisy, podpisy i przypisanie zdjęć. Kolejność od najnowszej. Zmiana przypisania wymaga edycji pola `photos` i ponownego builda.
 - `src/components/NewsCards.astro`: wspólna lista kart, na stronie głównej ograniczona do trzech wpisów.
 - `/aktualnosci/`: ciągły feed pełnych relacji na pionowej osi czasu, od najnowszej. Karty na stronie głównej prowadzą do kotwic poszczególnych spotkań. Bez osobnych podstron relacji. Zdjęcia w pełnym kadrze, z możliwością otwarcia większego obrazu w nowej karcie.
 - `src/layouts/NewsLayout.astro`: nagłówek i stopka podstron aktualności.
 - `src/assets/spotkania/`: kopie pięciu zdjęć WhatsApp z materiałów spotkania. Oryginały pozostają poza repo. W plikach wejściowych sprawdzono brak EXIF/XMP w APP1; Astro generuje responsywne WebP.
 
 Przypisanie zdjęć jest robocze, zgodnie z decyzją użytkownika ma zostać sprawdzone po publikacji. Nazwa uczelni w relacji z 19 października jest celowo ogólna: materiał tekstowy i oznaczenie na zdjęciu różnią się. Treści opracowano na podstawie `materialy/spotkanie/spotkania.md`, bez dopisywania niepotwierdzonych wyników spotkań. Do wpisów nie dodajemy długich myślników.
+
+Relacja z konferencji „Młodzi w Rolnictwie” (22–23 października 2026) opiera się na informacji użytkownika o udziale grupy i przedstawieniu pomysłu młodym rolnikom. Nazwę, datę i miejsce odczytano z ekranu na dostarczonym zdjęciu. Podany przez użytkownika link do zapowiedzi „Młodzi na Roli” ma inną nazwę i nie został użyty jako źródło szczegółów tej konferencji. Dwa zdjęcia w `src/assets/konferencja/` pochodzą z plików WhatsApp z 26 października, godz. 17.06.47 i 17.05.25; kopie zapisano bez metadanych, z zachowaniem pełnych kadrów.
